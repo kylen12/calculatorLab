@@ -1,4 +1,4 @@
-    var leftNumber = "";
+var leftNumber = "";
     var rightNumber = "";
     var currentDisplay = "";
     var currentOperator = ""; 
@@ -14,18 +14,23 @@
       {
         elements[i].onclick = handleInput;
       }  
-    }
+    };
+
+ 
      
-    var handleInput = function();
+    var handleInput = function()
     {
        var input = this.innerHTML;
+      var solution = 0;
+      var left = 0;
+      var right = 0;
         
         if (input === "=")
         {
-                      var solution = 0;
+              solution = 0;
              rightNumber = currentNumber;
-             var left = Number(leftNumber);
-             var right = Number(rightNumber);
+             left = Number(leftNumber);
+             right = Number(rightNumber);
 
               switch (currentOperator)
                 {
@@ -70,10 +75,10 @@
          
          else
            {
-             var solution = 0;
+             solution = 0;
              rightNumber = currentNumber;
-             var left = Number(leftNumber);
-             var right = Number(rightNumber);
+              left = Number(leftNumber);
+             right = Number(rightNumber);
 
               switch (currentOperator)
                 {
@@ -95,7 +100,7 @@
                rightNumber = "";
                currentNumber = "";
                currentOperator = input;
-             currentDisplay = currentNumber;
+             currentDisplay = leftNumber;
 
 
            }
@@ -116,7 +121,6 @@
       operatorDisplay.innerHTML = currentOperator;
       resultDisplay.innerHTML = currentDisplay;
       
-  
     };
     
     var clear = function()
@@ -125,6 +129,9 @@
           leftNumber = "";
           rightNumber = "";
           currentOperator = "";
+      currentDisplay = "";
+      
+      
     };
     
  
