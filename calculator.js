@@ -1,44 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <script type="text/javascript" src="calculator.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>HTML Calculator</title>
-</head>
-<body>
-  <div id="container">
-     <div id="result_display">
-       <div id="operator_display"></div>
-       <div id="result_display_value"></div>
-     </div>
-     <div id="buttons_row_1" class="row">
-       <div id="num_1" class="button">1</div>
-       <div id="num_2" class="button">2</div>
-       <div id="num_3" class="button">3</div>
-       <div class="button">+</div>
-     </div>
-     <div id="buttons_row_2" class="row">
-        <div id="num_4" class="button">4</div>
-        <div id="num_5" class="button">5</div>
-        <div id="num_6" class="button">6</div>
-        <div class="button">-</div>
-     </div>
-     <div id="buttons_row_3"  class="row">
-        <div id="num_7" class="button">7</div>
-        <div id="num_8" class="button">8</div>
-        <div id="num_9" class="button">9</div>
-        <div class="button">*</div>
-     </div>
-     <div id="buttons_row_4" class="row">
-        <div class="button">C</div>
-        <div class="button">0</div>
-        <div class="button">=</div>
-        <div class="button">/</div>
-     </div>
-  </div>
-  
-  
-  <script type="text/javascript">
     var leftNumber = "";
     var rightNumber = "";
     var currentDisplay = "";
@@ -57,7 +16,7 @@
       }  
     }
      
-    function handleInput()
+    var handleInput = function();
     {
        var input = this.innerHTML;
         
@@ -157,24 +116,15 @@
       operatorDisplay.innerHTML = currentOperator;
       resultDisplay.innerHTML = currentDisplay;
       
-      console.log("current: " + currentNumber);
-      console.log("left: " + leftNumber);
-      console.log("operator: " + currentOperator);
-      console.log("right: " + rightNumber);
   
-    }
+    };
     
-    function clear()
+    var clear = function()
     {
       currentNumber = "";
           leftNumber = "";
           rightNumber = "";
           currentOperator = "";
-    }
+    };
     
  
-    
-  </script>
-</body>
-
-</html>
